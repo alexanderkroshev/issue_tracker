@@ -18,15 +18,15 @@ public class IssueController {
     public IssueController(IssueService service) {
         this.service = service;
     }
-
-    @PostMapping("/create")
-    public void save(@ModelAttribute Issue tracker) {
-        service.save(tracker);
-    }
-
-    @GetMapping("/find_all")
-    public List<Issue> findAll() {
-        return service.findAll();
-    }
+//
+//    @PostMapping("/create")
+//    public void save(@ModelAttribute Issue tracker) {
+//        service.save(tracker);
+//    }
+//
+//    @GetMapping("/find_all")
+//    public List<Issue> findAll() {
+//        return service.findAll();
+//    }
 
 }

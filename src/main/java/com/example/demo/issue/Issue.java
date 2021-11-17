@@ -2,10 +2,7 @@ package com.example.demo.issue;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -15,6 +12,7 @@ public class Issue {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+   // @OneToOne(cascade = CascadeType.ALL)
     private String name;
 
     private String author;
