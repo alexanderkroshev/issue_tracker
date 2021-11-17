@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets</title>
+</head>
+<body>
+<div th:switch="${trackers}">
+    <h2 th:case="null">Issue Tracker</h2>
+    <div th:case="*">
+        <h2>Issue Tracker</h2>
+        <table>
+            <thead>
+            <tr>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="tracker : ${trackers}">
+                <td th:text="${tracker.name}"></td>
+                <td th:text="${tracker.status}"></td>
+                <td th:text="${tracker.date}"></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
